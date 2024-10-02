@@ -1,0 +1,96 @@
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* 메뉴 열릴 때 애니메이션 */
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 49;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease; /* 애니메이션 시간을 0.5초로 증가 */
+}
+
+/* 메뉴가 열릴 때 */
+.menuOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 메뉴가 닫힐 때 */
+.menuClose {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* 메뉴가 열릴 때 visibility 처리 */
+.visible {
+  visibility: visible;
+}
+
+/* 닫기 버튼 */
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* 다크 모드 메뉴 색상 */
+.dark .menu {
+  background-color: #fff;
+}
+
+.dark .hamburgerLine,
+.dark .closeButton {
+  background-color: white !important;
+  color: white !important;
+}
+
+/* 반응형 스타일 (1030px 이하) */
+@media (max-width: 1030px) {
+  .innerBox {
+    padding: 10px 20px !important;
+  }
+
+  .navLists {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  .closeButton {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  .linkLists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+
+  .listItem {
+    margin-left: 0px !important;
+  }
+}

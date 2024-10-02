@@ -1,0 +1,132 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "XenoDragon 마켓플레이스",
+      "description": "XenoDragon 마켓플레이스는 사용자가 게임 아이템과 디지털 자산을 안전하고 편리하게 거래할 수 있는 온라인 플랫폼입니다. React와 다양한 최신 웹 기술을 활용하여 개발되었습니다.",
+      "date": "2024-10-01",
+      "category": "Web Frontend",
+      "thumbnail": "/images/projects/marketplace.png",
+      "mainTech": "React",
+      "techStack": ["React", "Emotion", "Recoil", "Xsolla Payment", "AWS Amplify", "OAuth"],
+      "teamSize": 3,
+      "duration": {
+        "start": "2023-01",
+        "end": "2023-05"
+      },
+      "isActive": false,
+      "siteUrl": "https://marketplace.xenodragon.io",
+      "keyFeatures": [
+        "소셜 로그인 연동 (Google, Line, Discord)",
+        "Emotion을 활용한 반응형 디자인 및 테마 구현",
+        "React 기반의 동적이고 반응형 웹 애플리케이션 구축",
+        "Xsolla Payment를 통한 안전한 결제 시스템 통합",
+        "Recoil을 이용한 효율적인 상태 관리",
+        "AWS Amplify를 활용한 서버리스 아키텍처 구현"
+      ],
+      "type": "freelance"
+    },
+    {
+      "id": "2",
+      "title": "한글 NFT 마켓플레이스",
+      "description": "Typy는 한글 콘텐츠를 NFT로 변환하고 거래할 수 있는 혁신적인 플랫폼입니다. 이 서비스는 한글 창작물의 디지털 소유권을 보호하고, 창작자들에게 글로벌 시장 진출의 기회를 제공합니다.",
+      "date": "2024-10-01",
+      "category": "Web Frontend",
+      "thumbnail": "/images/projects/typy.png",
+      "mainTech": "React",
+      "techStack": ["React", "Emotion", "Recoil", "MetaMask", "Web3.js"],
+      "teamSize": 3,
+      "duration": {
+        "start": "2022-01",
+        "end": "2022-05"
+      },
+      "isActive": false,
+      "siteUrl": "https://medium.com/typy-officialkr-blog/%EC%95%88%EB%82%B4-%ED%8B%B0%ED%94%BC-nft-%EC%A0%84%EC%86%A1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EA%B0%80%EC%9D%B4%EB%93%9C-7be990a58b92",
+      "keyFeatures": [
+        "한글 콘텐츠의 NFT 변환 및 거래 기능",
+        "MetaMask를 통한 블록체인 지갑 연동",
+        "React와 Emotion을 활용한 동적이고 반응형인 UI",
+        "Recoil을 이용한 효율적인 상태 관리",
+        "Web3.js를 활용한 블록체인 트랜잭션 처리",
+        "Site 미운영으로 Site Url 블로그 포스트로 대체"
+      ],
+      "type": "freelance"
+    },
+    {
+      "id": "3",
+      "title": "파파레시피 NFT 민팅 서비스",
+      "description": "AboveGround는 비주얼 아티스트와 크리에이터들이 자신의 작품을 NFT로 쉽게 변환하고 판매할 수 있는 웹 기반 플랫폼입니다. 이 서비스는 디지털 자산의 생성과 관리를 간소화하여 크리에이터들의 NFT 시장 진입을 돕습니다.",
+      "date": "2024-10-01",
+      "category": "Web Frontend",
+      "thumbnail": "/images/projects/aboveground.png",
+      "mainTech": "React",
+      "techStack": ["React", "Recoil", "Emotion", "MetaMask", "Web3.js"],
+      "teamSize": 3,
+      "duration": {
+        "start": "2022-05",
+        "end": "2022-10"
+      },
+      "isActive": false,
+      "siteUrl": "https://www.aboveground.town",
+      "keyFeatures": [
+        "사용자 친화적인 NFT 민팅 인터페이스",
+        "MetaMask를 통한 안전한 디지털 지갑 연동",
+        "Emotion을 활용한 일관된 디자인 시스템",
+        "React와 Recoil 기반의 효율적인 상태 관리",
+        "Web3.js를 활용한 블록체인 상호작용"
+      ],
+      "type": "freelance"
+    },
+    {
+      "id": "4",
+      "title": "메타킹즈 NFT 민팅 사이트",
+      "description": "메타킹즈 NFT 민팅 사이트는 사용자들이 독특한 디지털 아트 작품을 NFT로 쉽게 생성하고 소유할 수 있는 플랫폼입니다. 한국의 블록체인 생태계에 특화되어 Kaikas와 Klip 지갑을 지원합니다.",
+      "date": "2024-10-01",
+      "category": "Web Frontend",
+      "thumbnail": "/images/projects/metakingz.png",
+      "mainTech": "React",
+      "techStack": ["React", "Recoil", "Emotion", "Web3.js", "Kaikas 지갑", "Klip 지갑"],
+      "teamSize": 3,
+      "duration": {
+        "start": "2023-01",
+        "end": "2023-05"
+      },
+      "isActive": true,
+      "siteUrl": "https://www.metakingz.io/mint",
+      "keyFeatures": [
+        "Kaikas와 Klip 지갑 연동을 통한 한국 사용자 친화적 NFT 민팅",
+        "React와 Recoil을 활용한 효율적인 상태 관리 및 UI 구현",
+        "Emotion을 이용한 일관된 디자인 시스템 구축",
+        "Web3.js를 활용한 블록체인 트랜잭션 처리 및 상태 모니터링"
+      ],
+      "type": "freelance"
+    },
+    {
+      "id": "5",
+      "title": "개인 기술 블로그",
+      "description": "Next.js 14의 최신 기능을 활용한 개인 기술 블로그 플랫폼입니다. App Router, Parallel Routes, Interceptor Routes 등 Next.js의 강력한 기능들을 실제 프로젝트에 적용하여 효율적이고 사용자 친화적인 블로그 경험을 제공합니다.",
+      "date": "2024-10-01",
+      "category": "Web Frontend",
+      "thumbnail": "/images/projects/my-blog.png",
+      "mainTech": "Next.Js",
+      "techStack": ["Next.js 14", "TypeScript", "Tailwind CSS"],
+      "teamSize": 1,
+      "duration": {
+        "start": "2024-07",
+        "end": "2024-09"
+      },
+      "githubUrl": "https://github.com/heroman15156/blog",
+      "isActive": true,
+      "siteUrl": "",
+      "keyFeatures": [
+        "Next.js 14 App Router를 활용한 효율적인 라우팅 구현",
+        "Interceptor Routes / Parallel Routes 로 모달 형태의 프로젝트 프리뷰 구현",
+        "다크 모드 지원 및 반응형 디자인",
+        "SEO 최적화 및 성능 개선을 위한 정적 생성(SSG) 활용",
+        "서버 구축 후 데이터 DB에서 관리(예정)",
+        "어드민 페이지 생성(예정)"
+      ],
+      "type": "personal"
+    }
+  ]
+}

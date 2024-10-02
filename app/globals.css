@@ -3,25 +3,95 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --active-color: #4f46e5;
+}
+li {
+  margin-left: 0;
+}
+html {
+  --background: #fcfcfc;
   --foreground: #171717;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
+/* Optional: custom utility layer */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.dark .swiper-button-prev,
+.dark .swiper-button-next {
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+  border: 1px solid gray;
+}
+.swiper-button-prev:after,
+.swiper-button-next::after {
+  content: '' !important;
+}
+.dark .swiper-button-prev:after,
+.dark .swiper-button-next::after {
+  content: '' !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+
+.rehype-code-title {
+  margin: 15px 0;
+}
+
+.index-module_type__E-SaG {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 1030px) {
+  .index-module_type__E-SaG {
+    font-size: 3rem;
+  }
+}
+
+.code-block-wrapper {
+  margin: 0 !important;
+}
+
+::selection {
+  background-color: rgba(79, 70, 229, 0.2);
+}
+
+.dark ::selection {
+  background-color: rgba(79, 70, 229, 0.6);
 }

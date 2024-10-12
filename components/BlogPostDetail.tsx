@@ -30,7 +30,7 @@ export default function BlogPostDetail({
         <article className="bg-background dark:bg-background rounded-lg overflow-hidden">
           {/* Post header */}
           <header className="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4 leading-[500px] inline-block">
               {title}
             </h1>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">

@@ -3,10 +3,18 @@
     {
       "id": "1",
       "title": "Zustand 상태관리하기",
-      "date": "2023-09-24",
+      "date": "2024-09-24",
       "category": "Status",
       "description": "React에서 Zustand로 상태관리하는 방법을 알아봅시다.",
       "thumbnail": "/images/posts/status/zustand.png"
+    },
+    {
+      "id": "2",
+      "title": "JWT는 어디에 보관하면 좋을까?",
+      "date": "2024-10-12",
+      "category": "Web",
+      "description": "Web에서 JWT을 어디에 보관하면 좋을지 알아봅시다.",
+      "thumbnail": "/images/posts/web/jwt-thumbnail.png"
     }
   ]
 }

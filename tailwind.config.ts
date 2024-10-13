@@ -12,6 +12,9 @@ const config: Config = {
       screens: {
         'max-1038': { max: '1038px' }, // 1038px 이하일 때 적용
       },
+      lineHeight: {
+        'extra-loose': '500px',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

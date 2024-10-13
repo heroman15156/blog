@@ -26,12 +26,12 @@ export default function BlogPostDetail({
   const { previousPost, nextPost } = getAdjacentPosts(id);
   return (
     <div className="flex flex-col lg:flex-row justify-center min-h-screen w-full bg-background dark:bg-background">
-      <div className="w-full lg:w-3/4 max-w-4xl px-4 lg:px-8 py-[50px]">
+      <div className="w-full lg:w-3/4 max-w-4xl px-4 lg:px-8 md:py-[50px]">
         <article className="bg-background dark:bg-background rounded-lg overflow-hidden">
           {/* Post header */}
           <header className="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4 leading-[500px] inline-block">
-              {title}
+            <h1 className="font-bold text-foreground dark:text-foreground mb-4 lg:text-5xl text-4xl">
+              <span className="leading-[50px] sm:leading-[70px]">{title}</span>
             </h1>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div className="flex items-center space-x-4 mb-2 md:mb-0">

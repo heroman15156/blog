@@ -8,7 +8,7 @@ import Header from '@/components/layout/Header';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
 import Footer from '@/components/layout/Footer';
-import { isProduction } from '@/constant/env';
+import { isProduction } from '../constant/env';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',

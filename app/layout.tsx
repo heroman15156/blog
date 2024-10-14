@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
-  console.log(process.env.NODE_ENV);
+  console.log(process.env.NEXT_PUBLIC_GTM_ID);
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${scdream.className} ${geistSans.variable} flex flex-col min-h-screen`}>

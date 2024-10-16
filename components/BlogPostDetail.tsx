@@ -1,10 +1,11 @@
-import React from 'react';
 import { getAdjacentPosts } from '@/services/postService';
 
 import MarkdownViewer from '@/components/MarkdownViewer';
 import Comments from '@/components/Comments';
 import PostNavigation from '@/components/PostNavigation';
 import TableOfContents from '@/components/TableOfContents';
+import { useEffect, useState } from 'react';
+import ScrollProgress from '@/components/ScrollProgress';
 
 type BlogPostDetailProps = {
   title: string;
@@ -24,9 +25,11 @@ export default function BlogPostDetail({
   thumbnail,
 }: BlogPostDetailProps) {
   const { previousPost, nextPost } = getAdjacentPosts(id);
+
   return (
     <div className="flex flex-col lg:flex-row justify-center min-h-screen w-full bg-background dark:bg-background">
-      <div className="w-full lg:w-3/4 max-w-4xl px-4 lg:px-8 md:py-[50px]">
+      <ScrollProgress />
+      <div className="w-full lg:w-3/4 max-w-4xl px-0 md:py-[50px] lg:px-8">
         <article className="bg-background dark:bg-background rounded-lg overflow-hidden">
           {/* Post header */}
           <header className="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
@@ -68,7 +71,7 @@ export default function BlogPostDetail({
             </div>
           </div>
 
-          <div className="mt-8 px-4">
+          <div className="mt-8 md:px-4">
             <MarkdownViewer content={content} />
           </div>
           <Comments />

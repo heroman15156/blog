@@ -3,7 +3,7 @@ import { DetailProject } from '@/model/project';
 
 export default function ProjectDetail({ ...project }: DetailProject) {
   return (
-    <div className="bg-white p-5 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-h-[90vh] flex flex-col">
+    <div className="bg-white max-1038:p-5 md:p-10 dark:bg-gray-800 rounded-lg overflow-hidden max-h-[92vh] flex flex-col">
       <div className="relative h-100 sm:h-64 md:h-72 flex-shrink-0">
         <Image
           src={project?.thumbnail as string}
@@ -13,7 +13,7 @@ export default function ProjectDetail({ ...project }: DetailProject) {
         />
       </div>
 
-      <div className="p-4 sm:p-6 overflow-y-auto flex-grow">
+      <div className="p-4 sm:p-6 flex-grow">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
           {project.title}
         </h1>

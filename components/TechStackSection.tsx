@@ -2,9 +2,9 @@ import React from 'react';
 import Badge from './Badge';
 
 const techStack = [
-  { name: 'React', color: 'blue' },
-  { name: 'Next.js', color: 'green' },
-  { name: 'NestJS', color: 'red' },
+  { name: 'Typescript', color: 'blue' },
+  { name: 'React', color: 'green' },
+  { name: 'Next.js', color: 'red' },
 ];
 
 export default function TechStackSection() {

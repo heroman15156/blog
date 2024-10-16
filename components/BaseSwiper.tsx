@@ -72,16 +72,16 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
         spaceBetween={20}
         slidesPerView={slidesPerViewSmall}
         navigation={{
-          prevEl: prevRef.current, // useRef로 버튼 참조
-          nextEl: nextRef.current, // useRef로 버튼 참조
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
         breakpoints={{
           768: { slidesPerView: slidesPerViewSmall },
           1024: { slidesPerView: slidesPerViewLarge },
         }}
         onSwiper={(swiper) => {
-          swiperRef.current = swiper; // Swiper 인스턴스를 저장
-          updateNavigationState(swiper); // Swiper 인스턴스가 생성될 때 상태 업데이트
+          swiperRef.current = swiper;
+          updateNavigationState(swiper);
         }}
         className="mySwiper"
         style={{ paddingBottom: '50px' }}
@@ -102,6 +102,7 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
                 className="w-full h-full object-cover rounded-t-lg"
                 width={100}
                 height={100}
+                priority
               />
             </div>
             <div className="px-4 pt-4">
@@ -127,7 +128,6 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
         </SwiperSlide>
       </Swiper>
 
-      {/* 이전 버튼 */}
       <button
         ref={prevRef}
         className={`absolute left-[-27px] sm:left-[30px] top-1/3 z-10 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 ${
@@ -137,7 +137,6 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
         <FaChevronLeft className="text-gray-600 dark:text-gray-300" size={20} />
       </button>
 
-      {/* 다음 버튼 */}
       <button
         ref={nextRef}
         className={`absolute right-[-28px] top-1/3 z-10 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 ${

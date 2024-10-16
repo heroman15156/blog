@@ -40,7 +40,7 @@ export default function BaseModal({ children }: Props) {
             </svg>
           </button>
         </div>
-        <div className="p-6 overflow-y-auto max-h-[80vh]">{children}</div>
+        <div className="p-6 overflow-y-auto md:max-h-[80vh]">{children}</div>
       </div>
     </div>
   );

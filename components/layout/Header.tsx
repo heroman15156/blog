@@ -27,7 +27,7 @@ export default function Header() {
           <div className="mx-auto w-full max-w-screen-xl flex justify-between items-center pt-5 pb-2 pl-5 pr-5 transition-colors duration-300 box-border">
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-lg font-semibold hidden sm:inline-block">
-                <span className="text-gray-700 dark:text-gray-300">김현진</span>
+                <span className="text-gray-700 dark:text-gray-300">Heroman</span>
                 <span className="text-blue-600 dark:text-blue-400">.DEV</span>
               </span>
             </Link>

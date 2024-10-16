@@ -4,7 +4,6 @@ import MarkdownViewer from '@/components/MarkdownViewer';
 import Comments from '@/components/Comments';
 import PostNavigation from '@/components/PostNavigation';
 import TableOfContents from '@/components/TableOfContents';
-import { useEffect, useState } from 'react';
 import ScrollProgress from '@/components/ScrollProgress';
 
 type BlogPostDetailProps = {

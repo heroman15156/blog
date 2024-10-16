@@ -67,6 +67,18 @@ const ContactSocialSection: React.FC = () => {
             github/heroman15156
           </Link>
         </li>
+
+        <li>
+          <strong>이력서:</strong>{' '}
+          <Link
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            PDF 이력서 다운로드
+          </Link>
+        </li>
       </ul>
       {showToast && (
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg transition-opacity duration-300">

@@ -67,13 +67,9 @@ export default function MarkdownViewer({ content }: Props) {
         img: ({ src, alt }) => {
           if (!src) return null;
 
-          const imageSrc = src;
-
-          console.log(imageSrc, 'imageSRc,', src);
-
           return (
             <Image
-              src={imageSrc}
+              src={src}
               alt={alt || ''}
               width={1920}
               height={1080}

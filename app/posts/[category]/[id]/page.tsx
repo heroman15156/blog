@@ -56,6 +56,8 @@ export default async function Page({ params: { id, category } }: Props) {
   }
   const content = getPostContent(category, id);
 
+  console.log(content, post);
+
   return (
     <div className="flex flex-col items-center min-h-screen w-full bg-background dark:bg-background">
       <BlogPostDetail

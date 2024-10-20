@@ -8,7 +8,7 @@ const categories = [
   { name: '전체', emoji: '🌐' }, // 전체 카테고리 추가
   { name: 'React', emoji: '⚛️' },
   { name: 'Status', emoji: '🔄' },
-  { name: 'Next.Js', emoji: '🟢' },
+  { name: 'NextJs', emoji: '🟢' },
   { name: 'NestJS', emoji: '🐈' },
   { name: 'MySQL', emoji: '🐬' },
   { name: 'AWS', emoji: '☁️' },

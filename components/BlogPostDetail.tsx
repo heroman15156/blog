@@ -5,6 +5,7 @@ import Comments from '@/components/Comments';
 import PostNavigation from '@/components/PostNavigation';
 import TableOfContents from '@/components/TableOfContents';
 import ScrollProgress from '@/components/ScrollProgress';
+import Image from 'next/image';
 
 type BlogPostDetailProps = {
   title: string;
@@ -24,6 +25,7 @@ export default function BlogPostDetail({
   thumbnail,
 }: BlogPostDetailProps) {
   const { previousPost, nextPost } = getAdjacentPosts(id);
+  const isVideo = thumbnail.toLowerCase().endsWith('.mov');
 
   return (
     <div className="flex flex-col lg:flex-row justify-center min-h-screen w-full bg-background dark:bg-background">
@@ -66,7 +68,26 @@ export default function BlogPostDetail({
 
           <div className="w-full flex justify-center bg-background mt-20 dark:bg-background">
             <div className="w-full max-w-[700px] aspect-[7/4]">
-              <img src={thumbnail} alt="Post thumbnail" className="w-full h-full object-cover" />
+              {isVideo ? (
+                <video
+                  style={{
+                    pointerEvents: 'none',
+                  }}
+                  controlsList="nodownload nofullscreen noremoteplayback"
+                  disablePictureInPicture
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src={thumbnail}
+                  controls
+                  className="w-full h-full object-cover"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <Image src={thumbnail} alt="Post thumbnail" layout="fill" objectFit="cover" />
+              )}{' '}
             </div>
           </div>
 

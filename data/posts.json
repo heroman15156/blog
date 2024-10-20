@@ -15,6 +15,14 @@
       "category": "Web",
       "description": "Web에서 access_token, refresh_token 어디에 보관하면 좋을지 알아봅시다.",
       "thumbnail": "/images/posts/web/jwt-thumbnail.png"
+    },
+    {
+      "id": "3",
+      "title": "NextJS Server Actions로 TODO앱 만들기",
+      "date": "2024-10-20",
+      "category": "NextJs",
+      "description": "NextJS Server Actions로 TODO앱을 만들어보겠습니다.",
+      "thumbnail": "/images/posts/nextjs/todo-app.mov"
     }
   ]
 }

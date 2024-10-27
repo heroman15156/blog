@@ -96,11 +96,39 @@ body {
   background-color: rgba(79, 70, 229, 0.6);
 }
 
+audio::-webkit-media-controls,
+video::-webkit-media-controls,
 audio::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline {
   display: none;
 }
-audio::-webkit-media-controls,
-video::-webkit-media-controls {
+
+/* Firefox */
+audio::-moz-media-controls,
+video::-moz-media-controls {
   display: none;
+}
+
+
+/* 표준 속성 */
+audio::-media-controls,
+video::-media-controls {
+  display: none;
+}
+
+/* 추가적인 컨트롤 숨김 */
+audio::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.about-wrapper {
+  h1 {
+    font-size: 3rem;
+  }
 }

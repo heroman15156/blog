@@ -9,7 +9,11 @@ const navLinks = [
   { href: PROJECTS_PATHNAME, label: 'Project' },
 ];
 
-export default function NavLinks() {
+type Props = {
+  toggleMenu?: () => void;
+};
+
+export default function NavLinks({ toggleMenu }: Props) {
   const pathname = usePathname();
 
   return (
@@ -17,7 +21,7 @@ export default function NavLinks() {
       {navLinks.map((link) => {
         const isActive = pathname === link.href;
         return (
-          <li className={`${styles.listItem} relative`} key={link.href}>
+          <li className={`${styles.listItem} relative`} key={link.href} onClick={toggleMenu}>
             <Link
               href={link.href}
               className={`text-[16px]  hover:text-activeColor dark:hover:text-activeColor pb-[19px] ${

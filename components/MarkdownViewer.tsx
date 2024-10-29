@@ -19,8 +19,19 @@ export default function MarkdownViewer({ content }: Props) {
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeCodeTitles, rehypeSlug]}
       components={{
-        code({ inline, className, children, ...props }) {
+        code({
+          inline,
+          className,
+          children,
+          ...props
+        }: {
+          inline?: boolean;
+          className?: string;
+          children: React.ReactNode;
+          'data-title'?: string;
+        }) {
           const match = /language-(\w+)/.exec(className || '');
+
           return !inline && match ? (
             <CodeBlock language={match[1]}>{String(children).replace(/\n$/, '')}</CodeBlock>
           ) : (

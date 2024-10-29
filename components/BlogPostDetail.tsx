@@ -66,7 +66,7 @@ export default function BlogPostDetail({
             </div>
           </div>
 
-          <div className="w-full flex justify-center bg-background mt-20 dark:bg-background">
+          <div className="w-full flex justify-center bg-background mt-5 dark:bg-background">
             <div className="w-full max-w-[700px] aspect-[7/4]">
               {isVideo ? (
                 <video
@@ -86,7 +86,14 @@ export default function BlogPostDetail({
                   Your browser does not support the video tag.
                 </video>
               ) : (
-                <Image src={thumbnail} alt="Post thumbnail" layout="fill" objectFit="cover" />
+                <Image
+                  src={thumbnail}
+                  alt="Post thumbnail"
+                  objectFit="cover"
+                  width={400}
+                  height={400}
+                  style={{ width: '100%', height: '100%' }}
+                />
               )}{' '}
             </div>
           </div>

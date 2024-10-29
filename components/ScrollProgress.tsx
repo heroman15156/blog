@@ -19,15 +19,6 @@ export default function ScrollProgress() {
     };
   }, []);
 
-  useEffect(() => {
-    if (window) {
-      const videoEle = document.querySelector('video');
-      if (videoEle) {
-        console.log('123123');
-      }
-    }
-  }, []);
-
   return (
     <div
       className="fixed top-0 left-0 h-1 transition-all duration-200 z-50"

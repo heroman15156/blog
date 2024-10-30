@@ -89,7 +89,7 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
         {projects.map((project, index) => (
           <SwiperSlide
             key={index}
-            className="p-4 border rounded-lg shadow-md bg-white dark:bg-gray-700 cursor-pointer"
+            className="p-4 border rounded-lg shadow-md bg-white dark:bg-gray-700 cursor-pointer min-h-[310px]"
             onClick={() => {
               console.log(index, 'index');
               router.push(`${PROJECTS_PATHNAME}/${project.id}`);
@@ -130,7 +130,7 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
 
       <button
         ref={prevRef}
-        className={`absolute left-[-27px] sm:left-[30px] top-1/3 z-10 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+        className={`absolute left-[-27px] sm:left-[-30px] top-1/3 z-10 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 ${
           !isBeginning ? 'invisible opacity-0' : 'visible opacity-100'
         }`}
       >

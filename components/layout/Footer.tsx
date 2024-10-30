@@ -20,7 +20,7 @@ const Footer: FC = () => {
           </div>
           <div className="flex items-center space-x-4">
             <a
-              href="https://github.com/wmc115156"
+              href="https://github.com/heroman15156"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200"

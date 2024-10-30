@@ -1,9 +1,16 @@
 'use client';
-import { ABOUT_PATHNAME, POSTS_PATHNAME, PROJECTS_PATHNAME } from '@/constant/pathname';
+import {
+  ABOUT_PATHNAME,
+  HOME_PATHNAME,
+  POSTS_PATHNAME,
+  PROJECTS_PATHNAME,
+} from '@/constant/pathname';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from '@/components/layout/Header.module.css';
 const navLinks = [
+  { href: HOME_PATHNAME, label: 'Home' },
+
   { href: POSTS_PATHNAME, label: 'Post' },
   { href: ABOUT_PATHNAME, label: 'About' },
   { href: PROJECTS_PATHNAME, label: 'Project' },

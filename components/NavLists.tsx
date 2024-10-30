@@ -9,8 +9,13 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from '@/components/layout/Header.module.css';
 const navLinks = [
-  { href: HOME_PATHNAME, label: 'Home' },
+  { href: POSTS_PATHNAME, label: 'Post' },
+  { href: ABOUT_PATHNAME, label: 'About' },
+  { href: PROJECTS_PATHNAME, label: 'Project' },
+];
 
+const mobileNavLinks = [
+  { href: HOME_PATHNAME, label: 'Home' },
   { href: POSTS_PATHNAME, label: 'Post' },
   { href: ABOUT_PATHNAME, label: 'About' },
   { href: PROJECTS_PATHNAME, label: 'Project' },
@@ -18,14 +23,17 @@ const navLinks = [
 
 type Props = {
   toggleMenu?: () => void;
+  isMobile?: boolean;
 };
 
-export default function NavLinks({ toggleMenu }: Props) {
+export default function NavLinks({ toggleMenu, isMobile }: Props) {
   const pathname = usePathname();
+
+  const navLinkLists = isMobile ? mobileNavLinks : navLinks;
 
   return (
     <ul className={`${styles.linkLists} flex items-center space-x-6 relative`}>
-      {navLinks.map((link) => {
+      {navLinkLists.map((link) => {
         const isActive = pathname === link.href;
         return (
           <li className={`${styles.listItem} relative`} key={link.href} onClick={toggleMenu}>

@@ -57,7 +57,7 @@ export default function Header() {
         } bg-white dark:bg-darkBackground`}
       >
         <nav className="flex flex-col space-y-4 p-4 max-1038:p-[2.5rem]">
-          <NavLinks toggleMenu={toggleMenu} />
+          <NavLinks toggleMenu={toggleMenu} isMobile={true} />
           <div className="w-auto self-start">
             <DarkModeToggle />
           </div>

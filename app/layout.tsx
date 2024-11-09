@@ -5,10 +5,10 @@ import localFont from 'next/font/local';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 import Header from '@/components/layout/Header';
-import { ThemeProvider } from 'next-themes';
 import React from 'react';
 import Footer from '@/components/layout/Footer';
 import { isProduction } from '../constant/env';
+import { Providers } from '@/app/providers';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -59,21 +59,20 @@ export default function RootLayout({
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
-  console.log(process.env.NEXT_PUBLIC_GTM_ID);
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${scdream.className} ${geistSans.variable} flex flex-col min-h-screen`}>
         {isProduction && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID as string} />}
-
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <Header />
-          <main className="max-w-screen-xl mx-auto w-full px-[20px] pt-[100px]">
+          <main className="max-w-screen-xl mx-auto w-full px-[20px] pt-[100px] flex-1">
             {children}
             {modal}
           </main>
           <Footer />
-        </ThemeProvider>
-        <div id="modal-root"></div>
+
+          <div id="modal-root"></div>
+        </Providers>
       </body>
     </html>
   );

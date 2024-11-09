@@ -24,7 +24,7 @@ export default function BaseModal({ children }: Props) {
   const modalContent = (
     <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="relative w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-xl">
-        <div className="absolute -top-12 right-0 sm:-right-12">
+        <div className="absolute top-2 right-2 sm:-right-12">
           <button
             onClick={onClose}
             className="bg-white dark:bg-gray-700 rounded-full p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors shadow-md"

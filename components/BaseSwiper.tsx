@@ -91,7 +91,6 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
             key={index}
             className="p-4 border rounded-lg shadow-md bg-white dark:bg-gray-700 cursor-pointer min-h-[310px]"
             onClick={() => {
-              console.log(index, 'index');
               router.push(`${PROJECTS_PATHNAME}/${project.id}`);
             }}
           >

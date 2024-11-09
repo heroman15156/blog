@@ -69,7 +69,6 @@ export default function TableOfContents({ content }: Props) {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
-    console.log('Clicked element:', element); // 디버깅용 로그
     if (element) {
       const headerOffset = 70;
       const elementPosition = element.getBoundingClientRect().top;

@@ -1,10 +1,48 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import ContactSocialSection from '@/components/ContactSocialSection';
+import styles from '@/app/about/about.module.css';
 
 export default function AboutMeSection() {
+  const skillRef = useRef<HTMLDivElement | null>(null);
+  const [isMovingUp, setIsMovingUp] = useState(false);
+  const [isSpread, setIsSpread] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsMovingUp(true);
+            setTimeout(() => {
+              setIsSpread(true);
+            }, 1500);
+          } else {
+            // 화면에서 사라지면 초기화
+            setIsMovingUp(false);
+            setIsSpread(false);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '-100px',
+      }
+    );
+
+    if (skillRef.current) {
+      observer.observe(skillRef.current);
+    }
+
+    return () => {
+      if (skillRef.current) {
+        observer.unobserve(skillRef.current);
+      }
+    };
+  }, []);
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -29,15 +67,32 @@ export default function AboutMeSection() {
         <ContactSocialSection />
         <div className="mt-8">
           <h3 className="text-xl font-semibold mb-4">주요 기술 스택</h3>
-          <div className="flex flex-wrap gap-2">
-            {['TypeScript', 'React', 'Next.js', 'Nest.js', 'MySQL'].map((tech) => (
-              <span
-                key={tech}
-                className="bg-gray-200 dark:bg-gray-600 px-3 py-1 rounded-full text-sm"
-              >
-                {tech}
-              </span>
-            ))}
+          <div className="w-full flex justify-center">
+            <div className={styles.scene}>
+              <div className={styles.cube}>
+                <div className={`${styles.face} ${styles.front}`}></div>
+                <div className={`${styles.face} ${styles.right}`}></div>
+                <div className={`${styles.face} ${styles.back}`}></div>
+                <div className={`${styles.face} ${styles.left}`}></div>
+                <div className={`${styles.face} ${styles.bottom}`}></div>
+                <div
+                  className={`${styles.skillsContainer} ${isMovingUp ? styles.startAnimation : ''}`}
+                  id="skillsContainer"
+                  ref={skillRef}
+                  data-spread={isSpread ? 'true' : 'false'}
+                >
+                  <div className={`${styles.skill} ${isSpread ? styles.spreadLeft : ''}`}>
+                    TypeScript
+                  </div>
+                  <div className={`${styles.skill} ${isSpread ? styles.spreadCenter : ''}`}>
+                    React
+                  </div>
+                  <div className={`${styles.skill} ${isSpread ? styles.spreadRight : ''}`}>
+                    Next.js
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

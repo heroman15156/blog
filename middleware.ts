@@ -23,6 +23,13 @@ export default auth((req) => {
 export const config = {
   matcher: [
     '/api/:path*',
-    '/((?!api|_next/static|favicon.ico|login|signup|about|posts|projects|project|$).*)',
+    {
+      source:
+        '/((?!_next/image|_next/static|_next/media|login|signup|about|posts|projects|project|images|public|$).*)',
+      missing: [
+        { type: 'header', key: 'next-router-prefetch' },
+        { type: 'header', key: 'purpose', value: 'prefetch' },
+      ],
+    },
   ],
 };

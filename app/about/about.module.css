@@ -1,0 +1,255 @@
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(40deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(79, 70, 229, 0.2);
+    border: 2px solid rgba(99, 102, 241, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.left::after {
+    content: "기술스택";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.skills-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.skill {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translate(-50%, -50%);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.skill:nth-child(1) {
+    background: #4797EF;
+}
+
+.skill:nth-child(2) {
+    background: #61DAFB;
+    color: #000000;
+}
+
+.skill:nth-child(3) {
+    background: #000000;
+    border: 2px solid #666;
+}
+
+.skills-container[data-spread="true"] .skill:nth-child(1) {
+    transform: translate(-200%, -50%) translateY(-110px);
+}
+.skills-container[data-spread="true"] .skill:nth-child(2) {
+    transform: translate(0%, -50%) translateY(-110px);
+}
+.skills-container[data-spread="true"] .skill:nth-child(3) {
+    transform: translate(200%, -50%) translateY(-110px);
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-110px);
+    }
+}
+
+.startAnimation {
+    animation: moveUp 1.5s forwards;
+}
+
+.spreadLeft {
+    transform: translate(-200%, -50%) !important;
+}
+
+.spreadCenter {
+    transform: translate(0%, -50%) !important;
+}
+
+.spreadRight {
+    transform: translate(200%, -50%) !important;
+}
+
+@media (max-width: 768px) {
+    .scene {
+        width: 180px;
+        height: 180px;
+        margin-top: 200px;
+        margin-bottom: 80px;
+    }
+    .front { transform: rotateY(0deg) translateZ(90px); }
+    .right { transform: rotateY(90deg) translateZ(90px); }
+    .back { transform: rotateY(180deg) translateZ(90px); }
+    .left { transform: rotateY(-90deg) translateZ(90px); }
+    .bottom { transform: rotateX(-90deg) translateZ(90px); }
+    .skill {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .skills-container[data-spread="true"] .skill:nth-child(1) {
+        transform: translate(-160%, -50%) translateY(-110px);
+    }
+    .skills-container[data-spread="true"] .skill:nth-child(3) {
+        transform: translate(160%, -50%) translateY(-110px);
+    }
+}
+
+@media (max-width: 480px) {
+    .scene {
+        width: 160px;
+        height: 160px;
+        margin-top: 150px;
+        margin-bottom: 60px;
+    }
+    .front { transform: rotateY(0deg) translateZ(80px); }
+    .right { transform: rotateY(90deg) translateZ(80px); }
+    .back { transform: rotateY(180deg) translateZ(80px); }
+    .left { transform: rotateY(-90deg) translateZ(80px); }
+    .bottom { transform: rotateX(-90deg) translateZ(80px); }
+
+    .face {
+        border-width: 1px;
+    }
+
+    .skill {
+        width: 60px;
+        height: 60px;
+        font-size: 11px;
+    }
+
+    .skills-container[data-spread="true"] .skill:nth-child(1) {
+        transform: translate(-130%, -50%) translateY(-90px);
+    }
+    .skills-container[data-spread="true"] .skill:nth-child(2) {
+        transform: translate(0%, -50%) translateY(-90px);
+    }
+    .skills-container[data-spread="true"] .skill:nth-child(3) {
+        transform: translate(130%, -50%) translateY(-90px);
+    }
+
+    @keyframes moveUp {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-90px);
+        }
+    }
+
+    .spreadLeft {
+        transform: translate(-130%, -50%) !important;
+    }
+
+    .spreadRight {
+        transform: translate(130%, -50%) !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .scene {
+        width: 140px;
+        height: 140px;
+        margin-top: 120px;
+        margin-bottom: 50px;
+    }
+
+    .skill {
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    .skills-container[data-spread="true"] .skill:nth-child(1) {
+        transform: translate(-120%, -50%) translateY(-80px);
+    }
+    .skills-container[data-spread="true"] .skill:nth-child(2) {
+        transform: translate(0%, -50%) translateY(-80px);
+    }
+    .skills-container[data-spread="true"] .skill:nth-child(3) {
+        transform: translate(120%, -50%) translateY(-80px);
+    }
+
+    @keyframes moveUp {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-80px);
+        }
+    }
+
+    .spreadLeft {
+        transform: translate(-120%, -50%) !important;
+    }
+
+    .spreadRight {
+        transform: translate(120%, -50%) !important;
+    }
+}

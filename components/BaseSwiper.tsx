@@ -30,7 +30,6 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
   const nextRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
 
-  // Swiper 인스턴스 초기화 후 상태 관리
   const updateNavigationState = (swiper: SwiperType) => {
     setIsBeginning(swiper.activeIndex > 0);
     setIsEnd(swiper.isEnd);
@@ -99,8 +98,9 @@ export default function BaseSwiper({ projects, slidesPerViewSmall, slidesPerView
                 src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-full object-cover rounded-t-lg"
-                width={100}
-                height={100}
+                fill // width, height 대신 fill 사용
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
                 priority
               />
             </div>

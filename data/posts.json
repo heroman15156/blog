@@ -31,6 +31,14 @@
       "category": "NextJs",
       "description": "Auth.js로 NextJs 14버전에서 인증을 보다 쉽게 구현해보겠습니다.",
       "thumbnail": "/images/posts/nextjs/auth-js.png"
+    },
+    {
+      "id": "5",
+      "title": "React Query와 Error Boundary로 우아하게 에러 처리하기",
+      "date": "2024-11-10",
+      "category": "React",
+      "description": "React Query와 Error Boundary로 우아하게 에러 처리를 해보겠습니다.",
+      "thumbnail": "/images/posts/react/react-error.png"
     }
   ]
 }

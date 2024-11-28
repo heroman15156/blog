@@ -11,8 +11,8 @@
       "techStack": ["React", "Emotion", "Recoil", "Xsolla Payment", "AWS Amplify", "OAuth"],
       "teamSize": 3,
       "duration": {
-        "start": "2023",
-        "end": "2023"
+        "start": "2023-01",
+        "end": "2023-05"
       },
       "isActive": false,
       "siteUrl": "https://marketplace.xenodragon.io",
@@ -37,8 +37,8 @@
       "techStack": ["React", "Emotion", "Recoil", "MetaMask", "Web3.js"],
       "teamSize": 3,
       "duration": {
-        "start": "2022",
-        "end": "2022"
+        "start": "2022-01",
+        "end": "2022-05"
       },
       "isActive": false,
       "siteUrl": "https://medium.com/typy-officialkr-blog/%EC%95%88%EB%82%B4-%ED%8B%B0%ED%94%BC-nft-%EC%A0%84%EC%86%A1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EA%B0%80%EC%9D%B4%EB%93%9C-7be990a58b92",
@@ -63,8 +63,8 @@
       "techStack": ["React", "Recoil", "Emotion", "MetaMask", "Web3.js"],
       "teamSize": 3,
       "duration": {
-        "start": "2022",
-        "end": "2022"
+        "start": "2022-05",
+        "end": "2022-10"
       },
       "isActive": false,
       "siteUrl": "https://www.aboveground.town",
@@ -88,8 +88,8 @@
       "techStack": ["React", "Recoil", "Emotion", "Web3.js", "Kaikas 지갑", "Klip 지갑"],
       "teamSize": 3,
       "duration": {
-        "start": "2022",
-        "end": "2022"
+        "start": "2023-01",
+        "end": "2023-05"
       },
       "isActive": true,
       "siteUrl": "https://www.metakingz.io/mint",

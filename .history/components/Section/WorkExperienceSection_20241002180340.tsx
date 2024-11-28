@@ -8,7 +8,7 @@ export default function WorkExperienceSection() {
     {
       company: 'Bytesmix(Freelancer)',
 
-      period: '2021.10 - 2024.01',
+      period: '2021.10 - 2024.06',
       description: (
         <div>
           <p>

@@ -2,8 +2,8 @@ export default function WorkExperienceSection() {
   const experiences = [
     {
       company: '무직',
-      period: '2024.07 - 현재',
-      description: '1:1 React 개인과외 중',
+      period: '2024.02(현재)',
+      description: '1:1 React 개인과외 및 간단한 웹 유지보수 업무',
     },
     {
       company: 'Bytesmix(Freelancer)',

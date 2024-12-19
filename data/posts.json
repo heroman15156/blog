@@ -47,6 +47,14 @@
       "category": "NextJs",
       "description": "NextJS + React Query로 Infinite Scroll 구현을 해보겠습니다.",
       "thumbnail": "/images/posts/nextjs/infinite-scroll.webp"
+    },
+    {
+      "id": "7",
+      "title": "Next.js 15와 MSW v2로 더 나은 API 모킹 구현하기",
+      "date": "2024-12-19",
+      "category": "NextJs",
+      "description": "Next.js 15와 MSW v2로 더 나은 API 모킹 구현해보겠습니다.",
+      "thumbnail": "/images/posts/nextjs/msw-thumbnail.png"
     }
   ]
 }

@@ -41,7 +41,7 @@ export default function MarkdownViewer({ content }: Props) {
           );
         },
         pre: ({ children }) => (
-          <pre className="relative p-3 m-0 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+          <pre className="relative my-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
             {children}
           </pre>
         ),

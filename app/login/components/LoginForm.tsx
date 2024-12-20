@@ -53,9 +53,9 @@ export default function LoginForm() {
     router.replace('/dashboard');
   };
 
-  // useEffect(() => {
-  //   redirect('/');
-  // }, []);
+  useEffect(() => {
+    redirect('/');
+  }, []);
 
   useEffect(() => {
     console.log(state.errors, 'errors');

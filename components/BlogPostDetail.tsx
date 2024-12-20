@@ -6,6 +6,7 @@ import PostNavigation from '@/components/PostNavigation';
 import TableOfContents from '@/components/TableOfContents';
 import ScrollProgress from '@/components/ScrollProgress';
 import Image from 'next/image';
+import PostViewCounter from '@/app/posts/_components/PostViewCounter';
 
 type BlogPostDetailProps = {
   title: string;
@@ -45,6 +46,7 @@ export default function BlogPostDetail({
                 <span className="text-foreground dark:text-foreground text-sm md:text-base">
                   {date}
                 </span>
+                <PostViewCounter />
               </div>
               {/*<div className="space-x-2">*/}
               {/*  <button className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">*/}

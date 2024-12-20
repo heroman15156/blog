@@ -9,3 +9,6 @@ export const AUTH_ERROR_MESSAGES = {
 } as const;
 
 export const publicPages = ['/api/auth/login', '/signup', '/', '/about', '/posts'];
+
+export const POST_COOKIE_NAME = 'post_session_id';
+export const POST_COOKIE_EXPIRES_DAYS = 7;

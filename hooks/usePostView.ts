@@ -1,6 +1,7 @@
 import { usePathname } from 'next/navigation';
 import { recordPostView } from '@/app/actions/post-actions';
 import { useEffect, useRef } from 'react';
+import { getDeviceInfo } from '@/utils/getDeviceInfo';
 
 const usePostView = () => {
   const pathname = usePathname();
@@ -11,8 +12,20 @@ const usePostView = () => {
     const savePostView = async () => {
       if (process.env.NODE_ENV !== 'production') return;
       if (!postId || isRecorded.current) return;
+      const pageLoadTime = Math.round(performance.now());
+      const { userAgent, deviceType } = getDeviceInfo();
+
+      const postMetadata = {
+        postId,
+        userAgent,
+        path: pathname,
+        deviceType,
+        referrer: document.referrer || null,
+        pageLoadTime,
+      };
+
       try {
-        await recordPostView(postId, pathname);
+        await recordPostView(postMetadata);
         isRecorded.current = true;
       } catch (error) {
         console.error('Failed to record view:', error);

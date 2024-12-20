@@ -1,7 +1,7 @@
 'use client';
 
-import usePostView from '@/hooks/usePostView';
 import { usePostCountView } from '@/app/posts/hooks/usePostView';
+import usePostView from '@/hooks/usePostView';
 
 export default function PostViewCounter() {
   const { viewCount } = usePostCountView();

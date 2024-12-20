@@ -1,7 +1,11 @@
 'use server';
 
 import { signInSchema } from '@/lib/validation/auth';
-import { signIn } from '@/auth';
+import { signIn, signOut } from '@/auth';
+
+export async function logout() {
+  await signOut();
+}
 
 export async function loginAction(_: any, formData: FormData) {
   try {

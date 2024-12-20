@@ -9,6 +9,7 @@ import React from 'react';
 import Footer from '@/components/layout/Footer';
 import { isProduction } from '../constant/env';
 import { Providers } from '@/app/providers';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -73,6 +74,7 @@ export default function RootLayout({
 
           <div id="modal-root"></div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

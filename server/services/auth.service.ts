@@ -1,7 +1,6 @@
 import { AuthRepository } from '@/server/repositories/auth/auth.repository';
 import { LoginDataRequest, Token } from '@/types/Auth.types';
 import { supabase } from '@/lib/supabase/client';
-import { AuthTokenResponse } from '@supabase/auth-js';
 import { ApiError } from '@/lib/error';
 
 export class AuthService {
@@ -37,8 +36,6 @@ export class AuthService {
       if (!user) {
         throw ApiError.unauthorized('Invalid refresh token');
       }
-      console.log('first', refreshToken);
-
       const {
         data: { session },
         error,
@@ -74,7 +71,6 @@ export class AuthService {
 
   async login(loginData: LoginDataRequest) {
     try {
-      console.log('startstatt');
       const user = await this.authRepository.findUserByEmail(loginData.email);
 
       if (!user) throw ApiError.notFound('사용자를 찾을 수 없습니다.');
@@ -87,8 +83,6 @@ export class AuthService {
       if (authError) {
         throw ApiError.badRequest('비밀번호가 일치하지 않습니다.');
       }
-
-      console.log(authData.session?.refresh_token, 'refhreToken-----');
 
       await this.authRepository.updateRefreshToken(user.id, authData.session?.refresh_token || '');
 
